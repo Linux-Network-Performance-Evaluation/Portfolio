@@ -1,0 +1,11 @@
+sudo qemu-system-x86_64 \
+-accel kvm \
+-cpu host,-rdtscp \
+-smp 2 \
+-m 4G \
+-device usb-tablet \
+-usb \
+-nographic \
+-device virtio-net,netdev=vmnic \
+-netdev user,id=vmnic,hostfwd=tcp:127.0.0.1:9001-:22 \
+-drive file=fedora_x64.qcow2,if=virtio

@@ -1,0 +1,6 @@
+*.qcow2
+*QEMU/*
+*.txt
+Assessment\ Guides/*
+Templates/*
+Timetables/*
