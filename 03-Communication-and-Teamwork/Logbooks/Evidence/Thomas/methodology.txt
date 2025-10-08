@@ -1,0 +1,400 @@
+Start by speeding up boot/login.
+Disable cloud-init:
+sudo touch /etc/cloud/cloud-init.disabled
+
+Disable motd:
+sudo nano /etc/default/motd-news
+Change these:
+	ENABLED=0
+	URLS=""
+sudo chmod -x /etc/update-motd.d/*
+
+Disable waiting for network on boot:
+sudo mkdir -p /etc/systemd/system/systemd-networkd-wait-online.service.d/
+
+Download packages on an Ubuntu installation that is online:
+apt download d-itg libsctp1 frr frr-pythontools libcares2 libyang2t64
+
+Move .deb packages to an external drive.
+Separate into client and router directories.
+Then plug it into project PCs.
+
+Mount drive:
+sudo mount /dev/sda1 /mnt
+
+On sender/receiver, install D-ITG:
+sudo dpkg -i /mnt/packages/client/*.deb
+
+On routers, install frr for dynamic routing:
+sudo dpkg -i /mnt/packages/router/*.deb
+
+First, enable IP forwarding on both routers:
+sudo nano /etc/sysctl.conf
+Edit these:
+net.ipv4.ip_forward=1
+net.ipv6.conf.all.forwarding=1
+
+Now set up netplan with static addresses:
+sudo nano /etc/netplan/50-cloud-init.yaml
+
+Config must be correctly indented.
+This part of the config will be shared between all four PCs:
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      dhcp6: no
+
+Technically, VLANs aren't needed with routers having two NICs each. 
+But a switch and one NIC per PC can be used instead.
+Static routes are needed for the clients.
+However, frr will add dynamic routing on the routers to simplify the config.
+
+PCs will use the following IPs:
+PC1 (Sender)
+192.168.10.2/24
+fd00:0:0:10::2/64
+
+Router1 (eth0)
+192.168.10.1/24
+fd00:0:0:10::1/64
+
+Router1 (eth1)
+192.168.20.1/24
+fd00:0:0:20::1/64
+
+Router2 (eth0)
+192.168.20.2/24
+fd00:0:0:20::2/64
+
+Router2 (eth1)
+192.168.30.1/24
+fd00:0:0:30::1/64
+
+PC2 (Receiver)
+192.168.30.2/24
+fd00:0:0:30::2/64
+
+The YAML file will be configured with these IPs. It can be done with or without VLANs.
+Without VLAN:
+PC1:
+
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      dhcp6: no
+	  addresses:
+        - 192.168.10.2/24
+	    - fd00:0:0:10::2/64
+	  routes:
+        - to: 192.168.20.0/24
+          via: 192.168.10.1
+        - to: 192.168.30.0/24
+          via: 192.168.10.1
+        - to: fd00:0:0:20::/64
+          via: fd00:0:0:10::1
+        - to: fd00:0:0:30::/64
+          via: fd00:0:0:10::1
+
+Router1:
+
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      dhcp6: no
+	  addresses:
+        - 192.168.10.1/24
+	    - fd00:0:0:10::1/64
+    eth1:
+      dhcp4: no
+      dhcp6: no
+      addresses:
+        - 192.168.20.1/24
+	    - fd00:0:0:20::1/64
+	  routes:
+	    - to: 192.168.30.0/24
+          via: 192.168.20.2
+	    - to: fd00:0:0:30::/64
+          via: fd00:0:0:20::2
+
+Router2:
+
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      dhcp6: no
+	  addresses:
+        - 192.168.20.2/24
+	    - fd00:0:0:20::2/64
+	  routes:
+	    - to: 192.168.10.0/24
+          via: 192.168.20.1
+	    - to: fd00:0:0:10::/64
+          via: fd00:0:0:20::1
+    eth1:
+      dhcp4: no
+      dhcp6: no
+      addresses:
+        - 192.168.30.1/24
+	    - fd00:0:0:30::1/64
+
+PC2:
+
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      dhcp6: no
+	  addresses:
+        - 192.168.30.2/24
+	    - fd00:0:0:30::2/64
+	  routes:
+        - to: 192.168.10.0/24
+          via: 192.168.30.1
+        - to: 192.168.20.0/24
+          via: 192.168.30.1
+        - to: fd00:0:0:10::/64
+          via: fd00:0:0:30::1
+        - to: fd00:0:0:20::/64
+          via: fd00:0:0:30::1
+
+With VLAN (static routes):
+PC1:
+
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      dhcp6: no
+	vlans:
+	  eth0.10:
+	    id: 10
+	    link: eth0
+	    addresses:
+          - 192.168.10.2/24
+	      - fd00:0:0:10::2/64
+	    routes:
+          - to: 192.168.20.0/24
+            via: 192.168.10.1
+          - to: 192.168.30.0/24
+            via: 192.168.10.1
+          - to: fd00:0:0:20::/64
+            via: fd00:0:0:10::1
+          - to: fd00:0:0:30::/64
+            via: fd00:0:0:10::1
+
+Router1:
+
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      dhcp6: no	
+    vlans:
+	  eth0.10:
+	    id: 10
+	    link: eth0
+	    addresses:
+          - 192.168.10.1/24
+	      - fd00:0:0:10::1/64
+      eth0.20:
+        id: 20
+		link: eth0
+        addresses:
+          - 192.168.20.1/24
+	      - fd00:0:0:20::1/64
+	    routes:
+          - to: 192.168.30.0/24
+            via: 192.168.20.2
+	      - to: fd00:0:0:30::/64
+            via: fd00:0:0:20::2
+
+Router2:
+
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      dhcp6: no
+	vlans:
+	  eth0.20:
+	    id: 20
+	    link: eth0
+	    addresses:
+          - 192.168.20.2/24
+	      - fd00:0:0:20::2/64
+	    routes:
+          - to: 192.168.10.0/24
+            via: 192.168.20.1
+	      - to: fd00:0:0:10::/64
+            via: fd00:0:0:20::1
+      eth0.30:
+	    id: 30
+		link: eth0
+        addresses:
+          - 192.168.30.1/24
+	      - fd00:0:0:30::1/64
+
+PC2:
+
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      dhcp6: no
+  vlans:
+    eth0.30:
+	  id: 30
+	  link: eth0
+	  addresses:
+        - 192.168.30.2/24
+	    - fd00:0:0:30::2/64
+	  routes:
+        - to: 192.168.10.0/24
+          via: 192.168.30.1
+        - to: 192.168.20.0/24
+          via: 192.168.30.1
+        - to: fd00:0:0:10::/64
+          via: fd00:0:0:30::1
+        - to: fd00:0:0:20::/64
+          via: fd00:0:0:30::1
+		  
+With VLAN (dynamic routes):
+
+PC1:
+
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      dhcp6: no
+	vlans:
+	  eth0.10:
+	    id: 10
+	    link: eth0
+	    addresses:
+          - 192.168.10.2/24
+	      - fd00:0:0:10::2/64
+	    routes:
+          - to: default
+            via: 192.168.10.1
+          - to: ::/0
+            via: fd00:0:0:10::1
+
+Router1:
+
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      dhcp6: no	
+    vlans:
+	  eth0.10:
+	    id: 10
+	    link: eth0
+	    addresses:
+          - 192.168.10.1/24
+	      - fd00:0:0:10::1/64
+      eth0.20:
+        id: 20
+		link: eth0
+        addresses:
+          - 192.168.20.1/24
+	      - fd00:0:0:20::1/64
+
+Router2:
+
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      dhcp6: no
+	vlans:
+	  eth0.20:
+	    id: 20
+	    link: eth0
+	    addresses:
+          - 192.168.20.2/24
+	      - fd00:0:0:20::2/64
+      eth0.30:
+	    id: 30
+		link: eth0
+        addresses:
+          - 192.168.30.1/24
+	      - fd00:0:0:30::1/64
+
+PC2:
+
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      dhcp6: no
+  vlans:
+    eth0.30:
+	  id: 30
+	  link: eth0
+	  addresses:
+        - 192.168.30.2/24
+	    - fd00:0:0:30::2/64
+	  routes:
+        - to: default
+          via: 192.168.30.1
+        - to: ::/0
+          via: fd00:0:0:30::1
+		  
+		  
+D-ITG needs certain flags when ran:
+-a to specify IP address
+-T to specify protocol (TCP/UDP)
+-c to specify packet size (in bytes)
+-t to specify duration of transmission (in milliseconds)
+-m to specify meter type (owdm or rttm)
+Meter type is important, as the default is owdm (one-way delay meter).
+However, owdm only works if all PCs have clocks in sync (e.g. via ntp).
+Therefore, rttm (round-trip time meter) MUST be used, else the data will be incorrect.
+-l to specify log name on the sender (<name>.log)
+-x to specify log name on the receiver (<name>.log)
+
+On PC2 (Receiver), run:
+ITGRecv
+
+On PC1 (Sender), run:
+For IPv4:
+ITGSend -a 192.168.30.2 -T <protocol> -c <pkt_size> -t 30000 -m rttm -l send.log -x recv.log
+
+For IPv6:
+ITGSend -a fd00:0:0:30::2 -T <protocol> -c <pkt_size> -t 30000 -m rttm -l send.log -x recv.log
+
+After all packets are sent, logs can be copied over (e.g. via USB or SSH).
+Logs can be decrypted with ITGDec:
+	To plaintext: 
+	ITGDec <name>.log -l <name>.txt
+	
+	To DATs (for use with Octave or MatPlot):
+	All data:
+	ITGDec <name>.log -o <name>.dat
+	Delay:
+	ITGDec <name>.log -d 100 <name>_delay.dat
+	Jitter:
+	ITGDec <name>.log -j 100 <name>_jitter.dat
+	Packet Loss:
+	ITGDec <name>.log -p 100 <name>_packetloss.dat
+	Throughput:
+	ITGDec <name>.log -b 100 <name>_throughput.dat

@@ -1,0 +1,49 @@
+ %--------------------------------------------------------------------------
+% Process Jitter
+% Larissa Goh
+% 11/05/2025
+%--------------------------------------------------------------------------
+clear
+clc
+close all
+
+%---------------Variables-----------------
+subfolder = "Test logs";
+jitter_per_run = 30;
+jitter_minimum = 0.001;
+
+%---------------GetFiles------------------
+files = dir(subfolder);
+files = files(3:end);
+
+%---------------Process Data--------------
+u = struct;
+mean_jitter = zeros(length(files),1);
+for i = 1:length(files)
+   % Load data
+   u.("Test_" + string(i)) = readtable(string(files(i).folder) + "\" + ...
+       string(files(i).name),VariableNamingRule="preserve");
+   test = u.("Test_" + string(i));
+
+   % Plot data
+   figure()
+   plot(test.Time,test.("Aggregate-Flow"))
+   
+   % Calculate Average
+   jitter_index = find(test.("Aggregate-Flow")>jitter_minimum);
+   jitter_values = test.("Aggregate-Flow")(jitter_index);
+   mean_jitter(i) = sum(jitter_values).*1000/jitter_per_run;
+end
+
+%---------------Plot Summary----------------
+mean_all_tests = mean(mean_jitter);
+plot(mean_jitter,Marker="o",MarkerEdgeColor='blue',LineStyle="none",...
+    DisplayName="Average Per Run")
+yline(mean_all_tests,LineStyle="--",Color="red",...
+    DisplayName="Average All Runs")
+xlabel("Test Number")
+ylabel("Jitter [ms]")
+ylim(22:23)
+xlim([0.5,10.5])
+grid on
+legend() 
