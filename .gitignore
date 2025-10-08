@@ -1,7 +1,18 @@
+*.cer
+*.deb
+*.img
+*.iso
+*.msixbundle
 *.qcow2
-*QEMU/*
+*.rpm
 *.txt
+*QEMU/*
+*WSL/*
 Assessment\ Guides/*
+D-ITG/*
+Logs/*
+old/*
+Packages/*
 Templates/*
 Timetables/*
 Workshops/*
