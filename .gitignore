@@ -5,14 +5,9 @@
 *.msixbundle
 *.qcow2
 *.rpm
-*.txt
-*QEMU/*
-*WSL/*
-Assessment\ Guides/*
-D-ITG/*
-Logs/*
-old/*
+Folder-Structure-Tree.md
+decoded_logs/*
+Excluded/*
+logs/*
 Packages/*
-Templates/*
 Timetables/*
-Workshops/*
