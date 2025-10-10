@@ -6,7 +6,7 @@
 *.qcow2
 *.rpm
 Folder-Structure-Tree.md
-04-Development-and-Quality-Assurance/Evaluation Testing/Logs/*/*logs/
+04-Development-and-Quality-Assurance/Evaluation-Testing/Logs/*/*logs/
 Excluded/*
 Packages/*
 Timetables/*
