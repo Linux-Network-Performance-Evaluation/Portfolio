@@ -1,4 +1,4 @@
-# COMP702/703 
+# COMP702/703 Research and Development
 ## Linux Networking Performance Evaluation (Physical Team)
 
 ### Project Folder Structure
