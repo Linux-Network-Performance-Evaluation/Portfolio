@@ -1,182 +1,182 @@
 ITGDec version 2.8.1 (r1023)
 Compile-time options: sctp dccp bursty multiport
 ----------------------------------------------------------
-Flow number: 5
-From 192.168.10.2:33032
+Flow number: 1
+From 192.168.10.2:56850
 To    192.168.30.2:8999
 ----------------------------------------------------------
-Total time               =     10.099658 s
-Total packets            =        102800
-Minimum delay            =     -0.000070 s
-Maximum delay            =      0.129812 s
-Average delay            =      0.097772 s
+Total time               =     10.089801 s
+Total packets            =        102714
+Minimum delay            =      0.000347 s
+Maximum delay            =      0.113409 s
+Average delay            =      0.086919 s
 Average jitter           =      0.000182 s
-Delay standard deviation =      0.018549 s
-Bytes received           =     118425600
-Average bitrate          =  93805.631834 Kbit/s
-Average packet rate      =  10178.562482 pkt/s
-Packets dropped          =             0 (0.00 %)
-Average loss-burst size  =      0.000000 pkt
-----------------------------------------------------------
-----------------------------------------------------------
-Flow number: 6
-From 192.168.10.2:33046
-To    192.168.30.2:8999
-----------------------------------------------------------
-Total time               =     10.093674 s
-Total packets            =        102687
-Minimum delay            =     -0.000058 s
-Maximum delay            =      0.116468 s
-Average delay            =      0.084508 s
-Average jitter           =      0.000182 s
-Delay standard deviation =      0.015554 s
-Bytes received           =     118295424
-Average bitrate          =  93758.069856 Kbit/s
-Average packet rate      =  10173.401677 pkt/s
+Delay standard deviation =      0.016425 s
+Bytes received           =     118326528
+Average bitrate          =  93818.720904 Kbit/s
+Average packet rate      =  10179.982737 pkt/s
 Packets dropped          =             0 (0.00 %)
 Average loss-burst size  =      0.000000 pkt
 ----------------------------------------------------------
 ----------------------------------------------------------
 Flow number: 2
-From 192.168.10.2:33054
+From 192.168.10.2:56862
 To    192.168.30.2:8999
 ----------------------------------------------------------
-Total time               =     10.080991 s
-Total packets            =        102398
-Minimum delay            =     -0.000021 s
-Maximum delay            =      0.114612 s
-Average delay            =      0.087499 s
-Average jitter           =      0.000183 s
-Delay standard deviation =      0.015039 s
-Bytes received           =     117962496
-Average bitrate          =  93611.825266 Kbit/s
-Average packet rate      =  10157.533123 pkt/s
-Packets dropped          =             0 (0.00 %)
-Average loss-burst size  =      0.000000 pkt
-----------------------------------------------------------
-----------------------------------------------------------
-Flow number: 1
-From 192.168.10.2:33060
-To    192.168.30.2:8999
-----------------------------------------------------------
-Total time               =     10.081744 s
-Total packets            =        102449
-Minimum delay            =     -0.000005 s
-Maximum delay            =      0.120613 s
-Average delay            =      0.087686 s
+Total time               =     10.094931 s
+Total packets            =        102685
+Minimum delay            =      0.000338 s
+Maximum delay            =      0.109726 s
+Average delay            =      0.079812 s
 Average jitter           =      0.000182 s
-Delay standard deviation =      0.014826 s
-Bytes received           =     118021248
-Average bitrate          =  93651.453955 Kbit/s
-Average packet rate      =  10161.833111 pkt/s
+Delay standard deviation =      0.014498 s
+Bytes received           =     118293120
+Average bitrate          =  93744.569428 Kbit/s
+Average packet rate      =  10171.936787 pkt/s
 Packets dropped          =             0 (0.00 %)
 Average loss-burst size  =      0.000000 pkt
 ----------------------------------------------------------
 ----------------------------------------------------------
 Flow number: 4
-From 192.168.10.2:33064
+From 192.168.10.2:56878
 To    192.168.30.2:8999
 ----------------------------------------------------------
-Total time               =     10.079469 s
-Total packets            =        102442
-Minimum delay            =      0.000041 s
-Maximum delay            =      0.112716 s
-Average delay            =      0.082890 s
+Total time               =     10.072452 s
+Total packets            =        102304
+Minimum delay            =      0.000407 s
+Maximum delay            =      0.127394 s
+Average delay            =      0.097572 s
 Average jitter           =      0.000183 s
-Delay standard deviation =      0.013461 s
-Bytes received           =     118013184
-Average bitrate          =  93666.191344 Kbit/s
-Average packet rate      =  10163.432220 pkt/s
+Delay standard deviation =      0.016488 s
+Bytes received           =     117854208
+Average bitrate          =  93605.178163 Kbit/s
+Average packet rate      =  10156.811867 pkt/s
 Packets dropped          =             0 (0.00 %)
 Average loss-burst size  =      0.000000 pkt
 ----------------------------------------------------------
 ----------------------------------------------------------
 Flow number: 3
-From 192.168.10.2:33068
+From 192.168.10.2:56894
 To    192.168.30.2:8999
 ----------------------------------------------------------
-Total time               =     10.069833 s
-Total packets            =        102210
-Minimum delay            =      0.000082 s
-Maximum delay            =      0.114297 s
-Average delay            =      0.085316 s
+Total time               =     10.070651 s
+Total packets            =        102245
+Minimum delay            =      0.000423 s
+Maximum delay            =      0.110310 s
+Average delay            =      0.080520 s
 Average jitter           =      0.000183 s
-Delay standard deviation =      0.013633 s
-Bytes received           =     117745920
-Average bitrate          =  93543.493720 Kbit/s
-Average packet rate      =  10150.118676 pkt/s
+Delay standard deviation =      0.013115 s
+Bytes received           =     117786240
+Average bitrate          =  93567.925251 Kbit/s
+Average packet rate      =  10152.769667 pkt/s
 Packets dropped          =             0 (0.00 %)
 Average loss-burst size  =      0.000000 pkt
 ----------------------------------------------------------
 ----------------------------------------------------------
-Flow number: 7
-From 192.168.10.2:33076
+Flow number: 5
+From 192.168.10.2:56906
 To    192.168.30.2:8999
 ----------------------------------------------------------
-Total time               =     10.068361 s
-Total packets            =        102192
-Minimum delay            =      0.000282 s
-Maximum delay            =      0.074588 s
-Average delay            =      0.056667 s
-Average jitter           =      0.000182 s
-Delay standard deviation =      0.008427 s
-Bytes received           =     117725184
-Average bitrate          =  93540.693664 Kbit/s
-Average packet rate      =  10149.814851 pkt/s
+Total time               =     10.055233 s
+Total packets            =        102044
+Minimum delay            =      0.000538 s
+Maximum delay            =      0.076813 s
+Average delay            =      0.058671 s
+Average jitter           =      0.000183 s
+Delay standard deviation =      0.008527 s
+Bytes received           =     117554688
+Average bitrate          =  93527.171772 Kbit/s
+Average packet rate      =  10148.347632 pkt/s
 Packets dropped          =             0 (0.00 %)
 Average loss-burst size  =      0.000000 pkt
 ----------------------------------------------------------
 ----------------------------------------------------------
-Flow number: 9
-From 192.168.10.2:33090
+Flow number: 6
+From 192.168.10.2:56910
 To    192.168.30.2:8999
 ----------------------------------------------------------
-Total time               =     10.071908 s
-Total packets            =        102440
-Minimum delay            =      0.000629 s
-Maximum delay            =      0.086151 s
-Average delay            =      0.067849 s
-Average jitter           =      0.000182 s
-Delay standard deviation =      0.009983 s
-Bytes received           =     118010880
-Average bitrate          =  93734.676687 Kbit/s
-Average packet rate      =  10170.863356 pkt/s
+Total time               =     10.068780 s
+Total packets            =        102241
+Minimum delay            =      0.000562 s
+Maximum delay            =      0.102901 s
+Average delay            =      0.079629 s
+Average jitter           =      0.000183 s
+Delay standard deviation =      0.012866 s
+Bytes received           =     117781632
+Average bitrate          =  93581.651004 Kbit/s
+Average packet rate      =  10154.259007 pkt/s
 Packets dropped          =             0 (0.00 %)
 Average loss-burst size  =      0.000000 pkt
 ----------------------------------------------------------
 ----------------------------------------------------------
 Flow number: 8
-From 192.168.10.2:33102
+From 192.168.10.2:56926
 To    192.168.30.2:8999
 ----------------------------------------------------------
-Total time               =     10.050903 s
-Total packets            =        101955
-Minimum delay            =      0.001438 s
-Maximum delay            =      0.085545 s
-Average delay            =      0.056209 s
+Total time               =     10.064570 s
+Total packets            =        102184
+Minimum delay            =      0.000691 s
+Maximum delay            =      0.080697 s
+Average delay            =      0.063015 s
+Average jitter           =      0.000184 s
+Delay standard deviation =      0.009317 s
+Bytes received           =     117715968
+Average bitrate          =  93568.601937 Kbit/s
+Average packet rate      =  10152.843092 pkt/s
+Packets dropped          =             0 (0.00 %)
+Average loss-burst size  =      0.000000 pkt
+----------------------------------------------------------
+----------------------------------------------------------
+Flow number: 9
+From 192.168.10.2:56938
+To    192.168.30.2:8999
+----------------------------------------------------------
+Total time               =     10.071906 s
+Total packets            =        102464
+Minimum delay            =      0.001134 s
+Maximum delay            =      0.085583 s
+Average delay            =      0.068290 s
 Average jitter           =      0.000182 s
-Delay standard deviation =      0.014996 s
-Bytes received           =     117452160
-Average bitrate          =  93485.856942 Kbit/s
-Average packet rate      =  10143.864686 pkt/s
+Delay standard deviation =      0.010002 s
+Bytes received           =     118038528
+Average bitrate          =  93756.655791 Kbit/s
+Average packet rate      =  10173.248241 pkt/s
+Packets dropped          =             0 (0.00 %)
+Average loss-burst size  =      0.000000 pkt
+----------------------------------------------------------
+----------------------------------------------------------
+Flow number: 7
+From 192.168.10.2:56942
+To    192.168.30.2:8999
+----------------------------------------------------------
+Total time               =     10.069324 s
+Total packets            =        102563
+Minimum delay            =      0.001549 s
+Maximum delay            =      0.130603 s
+Average delay            =      0.062732 s
+Average jitter           =      0.000181 s
+Delay standard deviation =      0.023817 s
+Bytes received           =     118152576
+Average bitrate          =  93871.307349 Kbit/s
+Average packet rate      =  10185.688731 pkt/s
 Packets dropped          =             0 (0.00 %)
 Average loss-burst size  =      0.000000 pkt
 ----------------------------------------------------------
 ----------------------------------------------------------
 Flow number: 10
-From 192.168.10.2:33118
+From 192.168.10.2:56956
 To    192.168.30.2:8999
 ----------------------------------------------------------
-Total time               =     10.055418 s
-Total packets            =        102029
-Minimum delay            =      0.001193 s
-Maximum delay            =      0.085335 s
-Average delay            =      0.055027 s
+Total time               =     10.063802 s
+Total packets            =        102476
+Minimum delay            =      0.001687 s
+Maximum delay            =      0.085820 s
+Average delay            =      0.068338 s
 Average jitter           =      0.000182 s
-Delay standard deviation =      0.013854 s
-Bytes received           =     117537408
-Average bitrate          =  93511.703243 Kbit/s
-Average packet rate      =  10146.669189 pkt/s
+Delay standard deviation =      0.009893 s
+Bytes received           =     118052352
+Average bitrate          =  93843.143575 Kbit/s
+Average packet rate      =  10182.632766 pkt/s
 Packets dropped          =             0 (0.00 %)
 Average loss-burst size  =      0.000000 pkt
 ----------------------------------------------------------
@@ -185,16 +185,16 @@ __________________________________________________________
 ****************  TOTAL RESULTS   ******************
 __________________________________________________________
 Number of flows          =            10
-Total time               =     10.126579 s
-Total packets            =       1023602
-Minimum delay            =     -0.000070 s
-Maximum delay            =      0.129812 s
-Average delay            =      0.076172 s
-Average jitter           =      0.000609 s
-Delay standard deviation =      0.020511 s
-Bytes received           =    1179189504
-Average bitrate          = 931560.009753 Kbit/s
-Average packet rate      = 101080.730225 pkt/s
+Total time               =     10.129288 s
+Total packets            =       1023920
+Minimum delay            =      0.000338 s
+Maximum delay            =      0.130603 s
+Average delay            =      0.074556 s
+Average jitter           =      0.000540 s
+Delay standard deviation =      0.018410 s
+Bytes received           =    1179555840
+Average bitrate          = 931600.199343 Kbit/s
+Average packet rate      = 101085.091075 pkt/s
 Packets dropped          =             0 (0.00 %)
 Average loss-burst size  =             0 pkt
 Error lines              =             0
