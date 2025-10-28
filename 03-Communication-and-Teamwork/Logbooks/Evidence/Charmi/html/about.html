@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Network Performance Evaluation Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Primary Navigation Bar */
+        nav.primary {
+            background-color: #0077b6;
+            overflow: hidden;
+        }
+
+        nav.primary a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav.primary a:hover {
+            background-color: #0096c7;
+        }
+
+        /* Secondary Navigation Bar (About sub-tabs) */
+        nav.secondary {
+            background-color: #0096c7;
+            overflow: hidden;
+        }
+
+        nav.secondary a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav.secondary a:hover {
+            background-color: #0077b6;
+        }
+
+        header {
+            background-color: #0096c7;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #0077b6;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #0077b6;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Primary Navigation Bar -->
+<nav class="primary">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="research.html">Research and Upskilling</a>
+    <a href="planning.html">Planning and Control</a>
+    <a href="communication.html">Communication and Teamwork</a>
+    <a href="development.html">Development and Quality Assurance</a>
+</nav>
+
+<header>
+    <h1>About the Project</h1>
+</header>
+
+
+
+<main>
+   <!-- Project Objectives Section -->
+    <section id="objectives">
+        <h2>Project Objectives</h2>
+        <p>The goal of this project is to evaluate the performance of three latest Linux-based Operating System distributions – <strong>Fedora, Ubuntu, and Kali Linux</strong>. These operating systems need to be configured as software routers before running evaluations. Tools such as <strong>D-ITG</strong> and <strong>iPerf</strong> will be used to generate evaluation traffic.</p>
+        <h3>Objectives to be achieved include:</h3>
+        <ul>
+            <li>Setup a network with four computers: two clients and two servers (servers configured as routers).</li>
+            <li>Use TCP and UDP as transmission protocols:
+                <ul>
+                    <li>Evaluate on IPv4</li>
+                    <li>Evaluate on IPv6</li>
+                </ul>
+            </li>
+            <li>Performance evaluation:
+                <ul>
+                    <li>Each evaluation should run a minimum of ten times.</li>
+                    <li>Evaluate for throughput, delay, jitter, and packet loss.</li>
+                    <li>Any evaluation that falls outside the 95% confidence interval needs to be re-run.</li>
+                </ul>
+            </li>
+            <li>Each evaluation will range from 128 to 1536 bytes to assess performance under different conditions.</li>
+            <li>Set up physical machines with Fedora, Ubuntu, and Kali Linux distributions configured as software routers.</li>
+            <li>Conduct performance evaluations for TCP and UDP transmissions on both IPv4 and IPv6 protocols.</li>
+            <li>Follow the Software Testing Life Cycle (STLC) methodology, including requirement analysis, planning, case development, environment setup, execution, and closure.</li>
+        </ul>
+    </section>
+
+    <!-- Final Report Section -->
+    <section id="report">
+        <h2>Final Report</h2>
+        <p>
+            The final report contains a detailed description of the methodology, test results, analysis, and conclusions of the project. 
+            <a href="finalreport.pdf" target="_blank">Download the report</a>.
+        </p>
+    </section>
+
+    <!-- Presentation Slides Section -->
+    <section id="slides">
+        <h2>Presentation Slides</h2>
+        <p>
+            The presentation slides summarize our research, methodology, results, and findings. 
+            <a href="presentationslides.pdf" target="_blank">Download the slides</a>.
+        </p>
+    </section>
+</main>
+
+<footer>
+    Project Portfolio
+</footer>
+
+</body>
+</html>
+
