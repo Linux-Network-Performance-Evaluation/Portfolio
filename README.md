@@ -51,8 +51,8 @@ Each section represents a major area of the project, with subfolders for specifi
 ```
 Portfolio/
 ├── .gitignore
-├── desktop.ini
-└── README.md
+├── README.md
+└── Team-Portfolio-Submission.pdf
 ```
 
 #### 01-Research-and-Upskilling/
@@ -79,15 +79,16 @@ Portfolio/
 
 ```
 02-Planning-and-Control/
+├── Handover Plan.docx
 ├── Mid-Term Review
 │   ├── Linux Network Evaluation (Physical) Mid-Term Status Report.pdf
 │   ├── Status Report.pptx
-│   ├── Status Report v1.4.docx
+│   ├── Status Report v1.5.docx
 │   └── Version-History
 │       ├── Status Report v1.0.docx
 │       ├── Status Report v1.1.docx
-│       ├── Status Report v1.2.docx
-│       └── Status Report v1.3.docx
+│       ├── Status Report v1.3.docx
+│       └── Status Report v1.4.docx
 ├── Project Brief.docx
 ├── Proposal
 │   ├── Planning-Documents
@@ -172,14 +173,14 @@ Portfolio/
 │       ├── Proposal Powerpoint.pptx
 │       └── Version-History
 │           └── First Draft Powerpoint.pptx
-└── Status Report v1.5.docx
+└── Status Report v1.6.docx
 ```
 
 #### 03-Communication-and-Teamwork/
 
 ```
 03-Communication-and-Teamwork/
-├── Attendance R&D COMP703 .xlsx
+├── Attendance R&D COMP703.xlsx
 ├── Client Contract.docx
 ├── Client Feedback Form.docx
 ├── Client Feedback Form_signed.pdf
@@ -189,7 +190,8 @@ Portfolio/
 │   │   ├── Larissa
 │   │   │   └── Jitter MATLAB Code
 │   │   ├── Nathan
-│   │   │   └── dat-converter.py
+│   │   │   ├── dat-converter.py
+│   │   │   └── git_commits.txt
 │   │   ├── Thomas
 │   │   │   ├── D-ITG.pdf
 │   │   │   ├── download_ubuntu_packages.sh
@@ -209,9 +211,13 @@ Portfolio/
 │   │   │   └── packetsizes.txt
 │   │   └── Win
 │   │       └── create_script.sh
-│   └── Version-Control
+│   ├── Logbook - Charmi Patel v2.pdf
+│   ├── Logbook - Kylie Afable v2.pdf
+│   ├── Logbook - Nathan Quai Hoi v2.pdf
+│   ├── Logbook - Thomas Robinson v2.pdf
+│   └── Version-History
 │       ├── Logbook - Charmi Patel v1.pdf
-│       ├── Logbook - Kylie Afable v1.xlsx
+│       ├── Logbook - Kylie Afable v1.pdf
 │       ├── Logbook - Nathan Quai Hoi v1.pdf
 │       ├── Logbook - Thomas Robinson v1.pdf
 │       ├── Logbook - Win Phyo v1.pdf
@@ -409,7 +415,6 @@ Portfolio/
 │   ├── How to run evaluation testing.docx
 │   ├── Logs
 │   │   ├── clean_data.py
-│   │   ├── Compare Data - Copy.xlsx
 │   │   ├── Compare Data.xlsx
 │   │   ├── excel.py
 │   │   ├── export_logs.sh
@@ -593,23 +598,29 @@ Portfolio/
 │           └── download_ubuntu_packages.sh
 ├── Poster
 │   ├── AUT-logo-black.jpg
-│   ├── poster_v1.png
-│   ├── poster_v2.png
+│   ├── poster_v3.png
 │   ├── qr_code.svg
-│   └── Sections
-│       ├── 01 Background.docx
-│       ├── 02 Rationale.docx
-│       ├── 03 Objectives.docx
-│       ├── 04 Project Impact.docx
-│       ├── 05 Goals.docx
-│       ├── 06 Project Management Methodology.docx
-│       ├── 07 Artefacts.docx
-│       ├── 08 Quality Assurance.docx
-│       ├── 09 Key Challenges.docx
-│       ├── 10 Lessons Learnt.docx
-│       ├── 11 References.docx
-│       └── 12 Acknowledgements.docx
+│   ├── Sections
+│   │   ├── 01 Background.docx
+│   │   ├── 02 Rationale.docx
+│   │   ├── 03 Objectives.docx
+│   │   ├── 04 Project Impact.docx
+│   │   ├── 05 Goals.docx
+│   │   ├── 06 Project Management Methodology.docx
+│   │   ├── 07 Artefacts.docx
+│   │   ├── 08 Quality Assurance.docx
+│   │   ├── 09 Key Challenges.docx
+│   │   ├── 10 Lessons Learnt.docx
+│   │   ├── 11 References.docx
+│   │   └── 12 Acknowledgements.docx
+│   └── Version-History
+│       ├── poster_v1.png
+│       └── poster_v2.png
 └── Quality-Assurance
+    ├── Completed Checklists
+    │   ├── Completed Fedora Checklists.pdf
+    │   ├── Completed Kali Checklists.pdf
+    │   └── Completed Ubuntu Checklists.pdf
     ├── Peer Review
     │   ├── Peer Review Checklist - Fedora Configuration v1.0.pdf
     │   ├── Peer Review Checklist - Kali Configuration v1.0.pdf
@@ -628,5 +639,4 @@ Portfolio/
 
 ---
 
-_Generated on October 28, 2025_  
-_Last Updated: October 28, 2025_
+_Last Updated: October 29, 2025_
