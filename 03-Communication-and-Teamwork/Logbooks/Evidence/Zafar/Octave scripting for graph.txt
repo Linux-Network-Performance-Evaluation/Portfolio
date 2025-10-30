@@ -1,0 +1,35 @@
+Load Files:
+
+delay = load("delay.dat");
+jitter = load("jitter.dat");
+throughput = load("throughput.dat");
+loss = load("loss.dat");
+
+
+Plot delay over time:
+plot(delay(:,1), delay(:,2));
+xlabel("Time (s)");
+ylabel("Delay (ms)");
+title("Delay vs Time");
+grid on;
+
+Plot jitter:
+plot(jitter(:,1), jitter(:,2));
+xlabel("Time (s)");
+ylabel("Jitter (ms)");
+title("Jitter vs Time");
+grid on;
+
+Plot throughput:
+plot(throughput(:,1), throughput(:,2));
+xlabel("Time (s)");
+ylabel("Throughput (kbps)");
+title("Throughput vs Time");
+grid on;
+
+Plot packet loss:
+plot(loss(:,1), loss(:,2));
+xlabel("Time (s)");
+ylabel("Loss (%)");
+title("Packet Loss vs Time");
+grid on;
