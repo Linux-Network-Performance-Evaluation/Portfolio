@@ -1,4 +1,5 @@
 # COMP702/703 Research and Development
+
 ## Linux Networking Performance Evaluation (Physical Team)
 
 ### Summary
@@ -37,7 +38,7 @@ All three Linux distributions (Ubuntu, Fedora, and Kali) now have complete sets 
 
 This ensures comprehensive cross-distribution performance comparisons can be conducted with complete data sets across all testing scenarios.
 
-**Total File Count:** 840 files across all directories and subdirectories.
+**Total File Count:** 880 files across all directories and subdirectories.
 
 ---
 
@@ -144,7 +145,7 @@ Portfolio/
 │   │           ├── 16. Issue Log v3.docx
 │   │           └── 21. Quality Assurance Plan v3.docx
 │   ├── Proposal-Document
-│   │   ├── Proposal_v2.4.docx
+│   │   ├── Proposal_v2.5.docx
 │   │   ├── Proposal_v2.4.pdf
 │   │   └── Version-History
 │   │       ├── Proposal_v0.1.docx
@@ -180,10 +181,11 @@ Portfolio/
 
 ```
 03-Communication-and-Teamwork/
-├── Attendance R&D COMP703.xlsx
+├── Attendance.xlsx
 ├── Client Contract.docx
 ├── Client Feedback Form.docx
 ├── Client Feedback Form_signed.pdf
+├── Deliverable Acceptance Form.docx
 ├── Group Details.xlsx
 ├── Logbooks
 │   ├── Evidence
@@ -639,4 +641,4 @@ Portfolio/
 
 ---
 
-_Last Updated: October 29, 2025_
+_Last Updated: October 30, 2025_
