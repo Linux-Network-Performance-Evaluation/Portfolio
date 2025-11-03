@@ -4,12 +4,12 @@
 
 ### Summary
 
-This R&D Project portfolio contains a comprehensive collection of documentation, testing files, configurations, and project management artifacts organised into four main categories:
+This R&D Project portfolio contains a comprehensive collection of documentation, evaluation files, configurations, and project management artifacts organised into four main categories:
 
 1. **Research and Upskilling** - Skills matrices, training materials, and virtualisation scripts
 2. **Planning and Control** - Project proposals, planning documents, and mid-term review materials
 3. **Communication and Teamwork** - Meeting records, logbooks, client communications, and team evidence
-4. **Development and Quality Assurance** - Testing methodologies, configuration files, evaluation logs, data analysis tools, and quality assurance checklists
+4. **Development and Quality Assurance** - Evaluation methodologies, configuration files, evaluation logs, data analysis tools, and quality assurance checklists
 
 The structure reflects a well-organised academic project with proper version control, comprehensive documentation, and systematic approach to both technical implementation and project management.
 
@@ -17,7 +17,7 @@ The structure reflects a well-organised academic project with proper version con
 
 ### File Completeness Analysis
 
-#### Evaluation Testing Log Files Status
+#### Evaluation Log Files Status
 
 | Distribution | IPv4 TCP | IPv4 UDP | IPv6 TCP | IPv6 UDP | Total | Status       |
 | ------------ | -------- | -------- | -------- | -------- | ----- | ------------ |
@@ -27,18 +27,18 @@ The structure reflects a well-organised academic project with proper version con
 
 #### Outcome
 
-✅ **All evaluation testing log files are now complete!**
+✅ **All evaluation log files are now complete!**
 
 All three Linux distributions (Ubuntu, Fedora, and Kali) now have complete sets of:
 
-- IPv4 TCP testing logs (12 files each)
-- IPv4 UDP testing logs (12 files each)
-- IPv6 TCP testing logs (12 files each)
-- IPv6 UDP testing logs (12 files each)
+- IPv4 TCP evaluation logs (12 files each)
+- IPv4 UDP evaluation logs (12 files each)
+- IPv6 TCP evaluation logs (12 files each)
+- IPv6 UDP evaluation logs (12 files each)
 
-This ensures comprehensive cross-distribution performance comparisons can be conducted with complete data sets across all testing scenarios.
+This ensures comprehensive cross-distribution performance comparisons can be conducted with complete data sets across all evaluation scenarios.
 
-**Total File Count:** 880 files across all directories and subdirectories.
+**Total File Count:** 446 files across all directories and subdirectories.
 
 ---
 
@@ -88,6 +88,7 @@ Portfolio/
 │   └── Version-History
 │       ├── Status Report v1.0.docx
 │       ├── Status Report v1.1.docx
+│       ├── Status Report v1.2.docx
 │       ├── Status Report v1.3.docx
 │       └── Status Report v1.4.docx
 ├── Project Brief.docx
@@ -129,7 +130,7 @@ Portfolio/
 │   │       │       └── 20. Gantt Chart v1.3.mpp
 │   │       ├── v2.0-Post-Feedback
 │   │       │   ├── 01. Scope Statement v2.docx
-│   │       │   ├── 07. Milestone Report Version 2.docx
+│   │       │   ├── 07. Milestone Report v2.docx
 │   │       │   ├── 08. Work Breakdown Structure Diagram v2.png
 │   │       │   ├── 08. Work Breakdown Structure v2.docx
 │   │       │   ├── 09. Gantt Chart v2.mpp
@@ -141,12 +142,13 @@ Portfolio/
 │   │       │   ├── 22. Conflict Resolution Plan.docx
 │   │       │   └── Network Diagram.ai
 │   │       └── v3.0-Refinements
+│   │           ├── 07. Milestone Report v3.docx
 │   │           ├── 08. Work Breakdown Structure v3.0.docx
 │   │           ├── 16. Issue Log v3.docx
 │   │           └── 21. Quality Assurance Plan v3.docx
 │   ├── Proposal-Document
 │   │   ├── Proposal_v2.5.docx
-│   │   ├── Proposal_v2.4.pdf
+│   │   ├── Proposal_v2.5.pdf
 │   │   └── Version-History
 │   │       ├── Proposal_v0.1.docx
 │   │       ├── Proposal_v1.01.docx
@@ -169,7 +171,9 @@ Portfolio/
 │   │       ├── Proposal_v2.2.docx
 │   │       ├── Proposal_v2.2_Submission.pdf
 │   │       ├── Proposal_v2.3.docx
-│   │       └── Proposal_v2.3.pdf
+│   │       ├── Proposal_v2.3.pdf
+│   │       ├── Proposal_v2.4.docx
+│   │       └── Proposal_v2.4.pdf
 │   └── Proposal-Presentation
 │       ├── Proposal Powerpoint.pptx
 │       └── Version-History
@@ -186,9 +190,18 @@ Portfolio/
 ├── Client Feedback Form.docx
 ├── Client Feedback Form_signed.pdf
 ├── Deliverable Acceptance Form.docx
-├── Group Details.xlsx
 ├── Logbooks
 │   ├── Evidence
+│   │   ├── Charmi
+│   │   │   └── html
+│   │   │       ├── about.html
+│   │   │       ├── communication.html
+│   │   │       ├── homepage.html
+│   │   │       ├── planning.html
+│   │   │       ├── projectobjectives.html
+│   │   │       └── research.html
+│   │   ├── Kylie
+│   │   │   └── Logbook Evidence.pdf
 │   │   ├── Larissa
 │   │   │   └── Jitter MATLAB Code
 │   │   ├── Nathan
@@ -198,6 +211,7 @@ Portfolio/
 │   │   │   ├── D-ITG.pdf
 │   │   │   ├── download_ubuntu_packages.sh
 │   │   │   ├── export_logs.sh
+│   │   │   ├── git_commits.txt
 │   │   │   ├── gpu-driver-fix.png
 │   │   │   ├── ip_addresses.txt
 │   │   │   ├── ipv4_old.sh
@@ -211,12 +225,16 @@ Portfolio/
 │   │   │   ├── methodology.txt
 │   │   │   ├── Network IPs.pdf
 │   │   │   └── packetsizes.txt
-│   │   └── Win
-│   │       └── create_script.sh
+│   │   ├── Win
+│   │   │   └── create_script.sh
+│   │   └── Zafar
+│   │       └── Octave scripting for graph.txt
 │   ├── Logbook - Charmi Patel v2.pdf
 │   ├── Logbook - Kylie Afable v2.pdf
 │   ├── Logbook - Nathan Quai Hoi v2.pdf
 │   ├── Logbook - Thomas Robinson v2.pdf
+│   ├── Logbook - Win Phyo v2.pdf
+│   ├── Logbook - Zafar Azad v2.pdf
 │   └── Version-History
 │       ├── Logbook - Charmi Patel v1.pdf
 │       ├── Logbook - Kylie Afable v1.pdf
@@ -224,55 +242,54 @@ Portfolio/
 │       ├── Logbook - Thomas Robinson v1.pdf
 │       ├── Logbook - Win Phyo v1.pdf
 │       └── Logbook - Zafar Azad v1.pdf
-├── Meetings
-│   ├── Agendas
-│   │   ├── Project_Status_Meeting_AgendaV2.doc
-│   │   ├── Team-Client Kick-off Meeting Agenda.docx
-│   │   ├── Team-Client Kick-off Meeting Agenda.pdf
-│   │   ├── Team-Client Meeting Agenda 01-05-25.docx
-│   │   ├── Team-Client Meeting Agenda 01-05-25.pdf
-│   │   ├── Team-Client Meeting Agenda 22-05-25.docx
-│   │   ├── Team-Client Meeting Agenda 22-05-25.pdf
-│   │   ├── Team-Client Meeting Agenda 27-03-25.docx
-│   │   └── Team-Client Meeting Agenda 27-03-25.pdf
-│   └── Minutes
-│       ├── Mentor-Client-Meetings
-│       │   ├── Meeting Minutes 2025-03-20 (Client Kick-off).docx
-│       │   ├── Meeting Minutes 2025-03-27 (Mentor).docx
-│       │   ├── Meeting Minutes 2025-04-03 (Client).docx
-│       │   ├── Meeting Minutes 2025-05-01 (Client).docx
-│       │   ├── Meeting Minutes 2025-05-22 (Client).docx
-│       │   ├── Meeting Minutes 2025-05-29 (Mentor).docx
-│       │   ├── Meeting Minutes 2025-06-05 (Client).docx
-│       │   ├── Meeting Minutes 2025-06-18 (Client).docx
-│       │   ├── Meeting Minutes 2025-07-31 (Client).docx
-│       │   ├── Meeting Minutes 2025-08-14 (Client).docx
-│       │   ├── Meeting Minutes 2025-09-04 (Client).docx
-│       │   ├── Meeting Minutes 2025-10-02 (Client).docx
-│       │   └── Meeting Minutes 2025-10-16 (Client).docx
-│       └── Team-Meetings
-│           ├── Meeting Minutes 2025-03-18 (Team Kick-off).docx
-│           ├── Meeting Minutes 2025-03-20 (Team).docx
-│           ├── Meeting Minutes 2025-03-31 (Team).docx
-│           ├── Meeting Minutes 2025-04-03 (Team).docx
-│           ├── Meeting Minutes 2025-04-04 (Team).docx
-│           ├── Meeting Minutes 2025-04-07 (Team).docx
-│           ├── Meeting Minutes 2025-04-15 (Team).docx
-│           ├── Meeting Minutes 2025-04-22 (Team).docx
-│           ├── Meeting Minutes 2025-04-30 (Team).docx
-│           ├── Meeting Minutes 2025-05-08 (Team).docx
-│           ├── Meeting Minutes 2025-05-15 (Team).docx
-│           ├── Meeting Minutes 2025-05-28 (Team).docx
-│           ├── Meeting Minutes 2025-06-18 (Team).docx
-│           ├── Meeting Minutes 2025-08-14 (Team).docx
-│           ├── Meeting Minutes 2025-08-28 (Team).docx
-│           ├── Meeting Minutes 2025-09-17 (Team).docx
-│           ├── Meeting Minutes 2025-09-25 (Team).docx
-│           ├── Meeting Minutes 2025-10-15 (Team).docx
-│           ├── Meeting Minutes 2025-10-16 (Team).docx
-│           ├── Meeting Minutes 2025-10-27 (Team).docx
-│           └── Meeting Minutes 2025-10-28 (Team).docx
-└── Timetables.xlsx
+└── Meetings
+    ├── Agendas
+    │   ├── Project_Status_Meeting_AgendaV2.doc
+    │   ├── Team-Client Kick-off Meeting Agenda.docx
+    │   ├── Team-Client Kick-off Meeting Agenda.pdf
+    │   ├── Team-Client Meeting Agenda 01-05-25.docx
+    │   ├── Team-Client Meeting Agenda 01-05-25.pdf
+    │   ├── Team-Client Meeting Agenda 22-05-25.docx
+    │   ├── Team-Client Meeting Agenda 22-05-25.pdf
+    │   ├── Team-Client Meeting Agenda 27-03-25.docx
+    │   └── Team-Client Meeting Agenda 27-03-25.pdf
+    └── Minutes
+        ├── Mentor-Client-Meetings
+        │   ├── Meeting Minutes 2025-03-20 (Client Kick-off).docx
+        │   ├── Meeting Minutes 2025-03-27 (Mentor).docx
+        │   ├── Meeting Minutes 2025-04-03 (Client).docx
+        │   ├── Meeting Minutes 2025-05-01 (Client).docx
+        │   ├── Meeting Minutes 2025-05-22 (Client).docx
+        │   ├── Meeting Minutes 2025-05-29 (Mentor).docx
+        │   ├── Meeting Minutes 2025-06-05 (Client).docx
+        │   ├── Meeting Minutes 2025-06-18 (Client).docx
+        │   ├── Meeting Minutes 2025-07-31 (Client).docx
+        │   ├── Meeting Minutes 2025-08-14 (Client).docx
+        │   ├── Meeting Minutes 2025-09-04 (Client).docx
+        │   ├── Meeting Minutes 2025-10-02 (Client).docx
+        │   └── Meeting Minutes 2025-10-16 (Client).docx
+        └── Team-Meetings
+            ├── Meeting Minutes 2025-03-18 (Team Kick-off).docx
+            ├── Meeting Minutes 2025-03-20 (Team).docx
+            ├── Meeting Minutes 2025-03-31 (Team).docx
+            ├── Meeting Minutes 2025-04-03 (Team).docx
+            ├── Meeting Minutes 2025-04-04 (Team).docx
+            ├── Meeting Minutes 2025-04-07 (Team).docx
+            ├── Meeting Minutes 2025-04-15 (Team).docx
+            ├── Meeting Minutes 2025-04-22 (Team).docx
+            ├── Meeting Minutes 2025-04-30 (Team).docx
+            ├── Meeting Minutes 2025-05-08 (Team).docx
+            ├── Meeting Minutes 2025-05-15 (Team).docx
+            ├── Meeting Minutes 2025-05-28 (Team).docx
+            ├── Meeting Minutes 2025-06-18 (Team).docx
+            ├── Meeting Minutes 2025-08-14 (Team).docx
+            ├── Meeting Minutes 2025-08-28 (Team).docx
+            ├── Meeting Minutes 2025-09-17 (Team).docx
+            ├── Meeting Minutes 2025-09-25 (Team).docx
+            ├── Meeting Minutes 2025-10-15 (Team).docx
+            ├── Meeting Minutes 2025-10-16 (Team).docx
+            ├── Meeting Minutes 2025-10-27 (Team).docx
+            └── Meeting Minutes 2025-10-28 (Team).docx
 ```
 
 #### 04-Development-and-Quality-Assurance/
@@ -600,14 +617,15 @@ Portfolio/
 │           └── download_ubuntu_packages.sh
 ├── Poster
 │   ├── AUT-logo-black.jpg
-│   ├── poster_v3.png
+│   ├── poster.svg
+│   ├── poster_v4.png
 │   ├── qr_code.svg
 │   ├── Sections
 │   │   ├── 01 Background.docx
 │   │   ├── 02 Rationale.docx
-│   │   ├── 03 Objectives.docx
-│   │   ├── 04 Project Impact.docx
-│   │   ├── 05 Goals.docx
+│   │   ├── 03 Goals.docx
+│   │   ├── 04 Objectives.docx
+│   │   ├── 05 Requirements.docx
 │   │   ├── 06 Project Management Methodology.docx
 │   │   ├── 07 Artefacts.docx
 │   │   ├── 08 Quality Assurance.docx
@@ -617,7 +635,8 @@ Portfolio/
 │   │   └── 12 Acknowledgements.docx
 │   └── Version-History
 │       ├── poster_v1.png
-│       └── poster_v2.png
+│       ├── poster_v2.png
+│       └── poster_v3.png
 └── Quality-Assurance
     ├── Completed Checklists
     │   ├── Completed Fedora Checklists.pdf
@@ -641,4 +660,4 @@ Portfolio/
 
 ---
 
-_Last Updated: October 30, 2025_
+_Last Updated: November 4, 2025_
